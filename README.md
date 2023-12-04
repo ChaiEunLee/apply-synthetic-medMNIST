@@ -8,7 +8,7 @@ This project is focused on whether using synthetic data actually improves the mo
 
 > Models : 1) Resnet50 , 2) [Deit,tiny](https://huggingface.co/facebook/deit-tiny-patch16-224)   
 Transfer Learning : 1) Change head, 2) Complex layer, 3) Domain Adaptation    
-Pre-trained : 1) ImageNet, 2) Backbone, 3) chest MNSIT
+Pre-trained : 1) ImageNet, 2) Backbone, 3) chest MNIST
 
 ## Dataset
 * Train : [Synthetic Dataset](https://github.com/hasibzunair/synthetic-covid-cxr-dataset/releases/tag/v0.1)
@@ -22,7 +22,7 @@ Train synthetic data and test in real world data (pneumoniaMNIST)
 ## Result
 #### ResNet50  
 
-> * Transer
+> * Transfer
 >   * ```Simple FT``` : change head to 2 class   
 >   * ```Complex FT``` : stack more layer before output   
 >   * ```DA``` : Fixibi
@@ -45,11 +45,11 @@ DA | Backbone | 0.1
 DA | chest MNIST | 0.1
 
 #### Deit 
-> * Transer
+> * Transfer
 >   * ```Simple FT``` : change head to 2 class   
 >   * ```Complex FT``` : stack more layer before output   
 >   * ```DA``` : CDTrans
-> * Pre-trained : 1) [ImageNet](https://github.com/facebookresearch/deit/blob/main/models.py), 2) [Backbone](https://github.com/facebookresearch/deit/blob/main/models.py), 3) [chest MNSIT]()
+> * Pre-trained : 1) [ImageNet](https://github.com/facebookresearch/deit/blob/main/models.py), 2) [Backbone](https://github.com/facebookresearch/deit/blob/main/models.py), 3) [chest MNIST]()
 > * [Hyperparameters](https://www.nature.com/articles/s41597-022-01721-8)    
 > ```BATCH_SIZE = 128```
 > ```NUM_EPOCHS = 50```

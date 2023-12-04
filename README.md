@@ -18,6 +18,10 @@ Pre-trained : 1) ImageNet, 2) Backbone, 3) chest MNIST
 Image Classification of pneumonia.   
 Train synthetic data and test in real world data (pneumoniaMNIST)
 
+## Process and Stacks
+* GPU :
+* cpus-per-task=4
+
 
 ## Result
 #### ResNet50  
@@ -56,6 +60,7 @@ DA | chest MNIST | 0.1
 > ```lr = 0.0005 * BATCH_SIZE/512```
 > ```weight_decay = 0.05```
 > ```warmup_steps = 5 ```
+> * Time : 3:00:00 
 
 
 Transfer | pre-trained | Accuracy 

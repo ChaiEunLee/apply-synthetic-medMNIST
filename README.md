@@ -3,56 +3,56 @@
 >Sehyun Park, [Chaieun Lee](https://github.com/ChaiEunLee), Jungguk Kim, Hyunbin Jin  (각자 깃허브 링크 달기!)
 
 ## Description
-In medical field, lack of data is always a challenge in real world. So, these days, there are many cases of creating synthetic data to increase training data.
-This project is focused on whether using synthetic data actually improves the model's performance.    
+In medical field, lack of data is always a challenge. So, these days, there are many cases of creating synthetic data to increase training data.
+This project is focused on **'whether using synthetic data actually improves the model's performance'**.    
 
 > Models : 1) Resnet50 , 2) [Deit,tiny](https://huggingface.co/facebook/deit-tiny-patch16-224)   
-Transfer Learning : 1) Change head, 2) Complex layer, 3) Domain Adaptation    
+Fine tuning : 1) Change head, 2) Complex layers, 3) Domain Adaptation    
 Pre-trained : 1) ImageNet, 2) Backbone, 3) chest MNIST
 
-## Dataset
+### Dataset
 * Train : [Synthetic Dataset](https://github.com/hasibzunair/synthetic-covid-cxr-dataset/releases/tag/v0.1)
 * Test : PneumoniaMNIST from [MedMNIST Official](https://github.com/MedMNIST/MedMNIST)
 
-## Task
+### Task
 Image Classification of pneumonia.   
 Train synthetic data and test in real world data (pneumoniaMNIST)
 
-## Process and Stacks
+### Process and Stacks
 * GPU :
 * cpus-per-task=4
 
 
 ## Result
-#### ResNet50  
+### ResNet50  
 
-> * Transfer
->   * ```Simple FT``` : change head to 2 class   
->   * ```Complex FT``` : stack more layer before output   
->   * ```DA``` : Fixibi
+> * Fine tuning
+>   * ```Simple``` : Change head to class numbers   
+>   * ```Complex``` : Stack more layers   
+>   * ```Domain Adaptation``` : Fixibi
 > * Pre-trained : 1) [ImageNet](https://github.com/MedMNIST/experiments/blob/main/MedMNIST2D/models.py), 2) [Backbone](https://github.com/MedMNIST/experiments/blob/main/MedMNIST2D/models.py), 3) [chest MNSIT](https://zenodo.org/records/7782114) from [official medMNIST](https://github.com/MedMNIST/experiments)
-> * (Hyperparameters)
-> ```BATCH_SIZE = 128```   
+> * [Hyperparameters]()   
+> ```BATCH_SIZE = 128```
 > ```NUM_EPOCHS = 50```
 > ```lr = 0.0001```
 
-Transfer | pre-trained | Accuracy 
+Fine tuning | Pre-trained | Test Accuracy 
 ---- | ---- | ----
-Simple FT | ImageNet | 0.1
-Simple FT | Backbone | 0.1
-Simple FT | chest MNIST | 0.1
-Complex FT | ImageNet | 0.1
-Complex FT | Backbone | 0.1
-Complex FT | chest MNIST | 0.1
+Simple | ImageNet | 0.1
+Simple | Backbone | 0.1
+Simple | chest MNIST | 0.1
+Complex | ImageNet | 0.1
+Complex | Backbone | 0.1
+Complex | chest MNIST | 0.1
 DA | ImageNet | 0.1
 DA | Backbone | 0.1
 DA | chest MNIST | 0.1
 
-#### Deit 
-> * Transfer
->   * ```Simple FT``` : change head to 2 class   
->   * ```Complex FT``` : stack more layer before output   
->   * ```DA``` : CDTrans
+### Deit 
+> * Fine tuning
+>   * ```Simple``` : Change head to class numbers   
+>   * ```Complex``` : Stack more layers   
+>   * ```Domain Adaptation``` : CDTrans
 > * Pre-trained : 1) [ImageNet](https://github.com/facebookresearch/deit/blob/main/models.py), 2) [Backbone](https://github.com/facebookresearch/deit/blob/main/models.py), 3) [chest MNIST]()
 > * [Hyperparameters](https://www.nature.com/articles/s41597-022-01721-8)    
 > ```BATCH_SIZE = 128```
@@ -63,14 +63,14 @@ DA | chest MNIST | 0.1
 > * Time : 3:00:00 
 
 
-Transfer | pre-trained | Accuracy 
+Fine tuning | Pre-trained | Test Accuracy 
 ---- | ---- | ----
-Simple FT | ImageNet | 0.1
-Simple FT | Backbone | 0.1
-Simple FT | chest MNIST | 0.1
-Complex FT | ImageNet | 0.1
-Complex FT | Backbone | 0.1
-Complex FT | chest MNIST | 0.1
+Simple | ImageNet | 0.1
+Simple | Backbone | 0.1
+Simple | chest MNIST | 0.1
+Complex | ImageNet | 0.1
+Complex | Backbone | 0.1
+Complex | chest MNIST | 0.1
 DA | ImageNet | 0.1
 DA | Backbone | 0.1
 DA | chest MNIST | 0.1
@@ -146,6 +146,7 @@ conda activate {YOUR_ENV_NAME}
 # Reference
 [MedMNIST Experiment Official](https://github.com/MedMNIST/experiments), [deit-tiny-pathch16-224 hugging face official](https://huggingface.co/facebook/deit-tiny-patch16-224)    
 [Synthetic Dataset](https://github.com/hasibzunair/synthetic-covid-cxr-dataset/releases/tag/v0.1), [MedMNIST Official](https://github.com/MedMNIST/MedMNIST)
+
 
 ## Language
 <p>

@@ -1,10 +1,10 @@
 # Applicability of synthetic data in medical field
 >2023-2 데이터사이언스 특강 (전이학습 기반의 딥러닝)   
->Sehyun Park, [Chaieun Lee](https://github.com/ChaiEunLee), Jungguk Kim, Hyunbin Jin  (각자 깃허브 링크 달기!)
+>[Sehyun Park](https://github.com/sehyunpark99), [Chaieun Lee](https://github.com/ChaiEunLee), Jungguk Kim, Hyunbin Jin  (각자 깃허브 링크 달기!)
 
 ## Description
 In medical field, lack of data is always a challenge. So, these days, there are many cases of creating synthetic data to increase training data.
-This project is focused on **'whether using synthetic data actually improves the model's performance'**.    
+This project is focused on **'Would synthetic data indeed beneficial in training medical AI model and improve the model's performance'**.    
 
 > Models : 1) Resnet50 , 2) [Deit,tiny](https://huggingface.co/facebook/deit-tiny-patch16-224)   
 Fine tuning : 1) Change head, 2) Complex layers, 3) Domain Adaptation    
@@ -19,7 +19,7 @@ Image Classification of pneumonia.
 Train synthetic data and test in real world data (pneumoniaMNIST)
 
 ### Process and Stacks
-* GPU :
+* GPU : 1 A6000
 * cpus-per-task=4
 
 
@@ -48,7 +48,7 @@ DA | ImageNet | 0.1
 DA | Backbone | 0.1
 DA | chest MNIST | 0.1
 
-### Deit 
+### DeiT
 > * Fine tuning
 >   * ```Simple``` : Change head to class numbers   
 >   * ```Complex``` : Stack more layers   
@@ -146,7 +146,6 @@ conda activate {YOUR_ENV_NAME}
 # Reference
 [MedMNIST Experiment Official](https://github.com/MedMNIST/experiments), [deit-tiny-pathch16-224 hugging face official](https://huggingface.co/facebook/deit-tiny-patch16-224)    
 [Synthetic Dataset](https://github.com/hasibzunair/synthetic-covid-cxr-dataset/releases/tag/v0.1), [MedMNIST Official](https://github.com/MedMNIST/MedMNIST)
-
 
 ## Language
 <p>

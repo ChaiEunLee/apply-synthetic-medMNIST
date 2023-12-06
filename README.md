@@ -6,30 +6,30 @@
 In medical field, lack of data is always a challenge. So, these days, there are many cases of creating synthetic data to increase training data.
 This project is focused on **'Would synthetic data indeed beneficial in training medical AI model and improve the model's performance'**.    
 
-> Models : 1) Resnet50 , 2) [Deit,tiny](https://huggingface.co/facebook/deit-tiny-patch16-224)   
-Fine tuning : 1) Change head, 2) Complex layers, 3) Domain Adaptation    
-Pre-trained : 1) ImageNet, 2) Backbone, 3) chest MNIST
-
+> Models : 1) Resnet50 , 2) [DeiT-tiny](https://huggingface.co/facebook/deit-tiny-patch16-224)   
+Fine tuning: 1) Classifier head, 2) Complex Layers, 3) Domain Adaptation 
+Pre-trained by: 1) Backbone, 2) ImageNet, 3) chestMNIST
+ 
 ### Dataset
 * Train : [Synthetic Dataset](https://github.com/hasibzunair/synthetic-covid-cxr-dataset/releases/tag/v0.1)
 * Test : PneumoniaMNIST from [MedMNIST Official](https://github.com/MedMNIST/MedMNIST)
 
 ### Task
-Image Classification of pneumonia.   
-Train synthetic data and test in real world data (pneumoniaMNIST)
+Image Classification of Pneumonia.   
+Train synthetic data and test in real-world data (pneumoniaMNIST)
 
 ### Process and Stacks
-* GPU : 1 A6000
+* GPU: 1 A6000
 * cpus-per-task=4
 
 
 ## Result
 ### ResNet50  
 
-> * Fine tuning
->   * ```Simple``` : Change head to class numbers   
->   * ```Complex``` : Stack more layers   
->   * ```Domain Adaptation``` : Fixibi
+> * Fine-tuning
+>   * ```Simple``` : Change the classifier head according to the number of classes of the task (binary)   
+>   * ```Complex``` : Stack more layers on FC Layer
+>   * ```Domain Adaptation``` : [Fixbi](https://github.com/NaJaeMin92/FixBi)
 > * Pre-trained : 1) [ImageNet](https://github.com/MedMNIST/experiments/blob/main/MedMNIST2D/models.py), 2) [Backbone](https://github.com/MedMNIST/experiments/blob/main/MedMNIST2D/models.py), 3) [chest MNSIT](https://zenodo.org/records/7782114) from [official medMNIST](https://github.com/MedMNIST/experiments)
 > * [Hyperparameters]()   
 > ```BATCH_SIZE = 128```
@@ -50,9 +50,9 @@ DA | chest MNIST | 0.1
 
 ### DeiT
 > * Fine tuning
->   * ```Simple``` : Change head to class numbers   
+>   * ```Simple``` : Change the classifier head according to the number of classes of the task
 >   * ```Complex``` : Stack more layers   
->   * ```Domain Adaptation``` : CDTrans
+>   * ```Domain Adaptation``` : [CDTrans](https://github.com/CDTrans/CDTrans)
 > * Pre-trained : 1) [ImageNet](https://github.com/facebookresearch/deit/blob/main/models.py), 2) [Backbone](https://github.com/facebookresearch/deit/blob/main/models.py), 3) [chest MNIST]()
 > * [Hyperparameters](https://www.nature.com/articles/s41597-022-01721-8)    
 > ```BATCH_SIZE = 128```
@@ -108,7 +108,7 @@ conda env create -f environment.yaml
 conda activate {YOUR_ENV_NAME}
 ```
 ## Run File
-* Resnet
+* Resnet50
   - Simple Fine-tuning
   ```
   cd resnet
@@ -124,7 +124,7 @@ conda activate {YOUR_ENV_NAME}
   cd resnet
   python ${HOME}/Resnet.py
   ```
-* Deit
+* DeiT
   - Simple Fine-tuning
   ```
   cd Deit

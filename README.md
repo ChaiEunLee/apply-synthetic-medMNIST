@@ -1,6 +1,6 @@
 # Applicability of synthetic data in medical field
 >2023-2 데이터사이언스 특강 (전이학습 기반의 딥러닝)   
->[Sehyun Park](https://github.com/sehyunpark99), [Chaieun Lee](https://github.com/ChaiEunLee), Jungguk Kim, Hyunbin Jin  (각자 깃허브 링크 달기!)
+>[Sehyun Park](https://github.com/sehyunpark99), [Chaieun Lee](https://github.com/ChaiEunLee), Jungguk Kim, [Hyunbin Jin](https://github.com/hyunbinui)  (각자 깃허브 링크 달기!)
 
 ## Description
 In medical field, lack of data is always a challenge. So, these days, there are many cases of creating synthetic data to increase training data.

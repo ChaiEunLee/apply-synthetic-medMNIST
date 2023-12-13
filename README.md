@@ -71,7 +71,7 @@ ChestMNIST | DA |  0.1
 >   * ```Synthetic base``` : Train in synthetic data and test with real data.   
 >   * ```Synthetic augmentation``` :  Trained from scratch on varying splits of real and synthetic training data.
 >   * ```Synthetic fine-tuning``` : Trained of real data and fine-tuning with synthetic data. 
-> * [Hyperparameters](https://www.nature.com/articles/s41597-022-01721-8)    
+> * [Hyperparameters](https://arxiv.org/abs/2012.12877)    
 > ```BATCH_SIZE = 128```
 > ```NUM_EPOCHS = 50```
 > ```lr = 0.0005 * BATCH_SIZE/512```

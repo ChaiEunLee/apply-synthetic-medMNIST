@@ -166,6 +166,7 @@ with zipfile.ZipFile(f"{PATH}/synthetic_shared.zip", 'r') as zip_ref:
   ```
 
 # Reference
+* Hugo Touvron, Matthieu Cord, Matthijs Douze, Francisco Massa, Alexandre Sablayrolles, Hervé Jégou. (2020). [Training data-efficient image transformers & distillation through attention. arXiv:2012.12877.](https://arxiv.org/abs/2012.12877)   
 * MedMNIST, “GitHub - MedMNIST/experiments: Codebase for reproducible benchmarking experiments in MedMNIST v2,” GitHub. [https://github.com/MedMNIST/experiments](https://github.com/MedMNIST/experiments)   
 * MedMNIST, “GitHub - MedMNIST/MedMNIST: MedMNIST Introduction in MedMNIST v2,” GitHub. [https://github.com/MedMNIST/MedMNIST](https://github.com/MedMNIST/MedMNIST)    
 * synthetic-covid-cxr-dataset, GitHub - hasibzunair/synthetic-covid-cxr-dataset : Synthetic COVID-19 Chest X-ray Dataset for Computer-Aided Diagnosis, GitHub. [https://github.com/hasibzunair/synthetic-covid-cxr-dataset/releases/tag/v0.1](https://github.com/hasibzunair/synthetic-covid-cxr-dataset/releases/tag/v0.1)   

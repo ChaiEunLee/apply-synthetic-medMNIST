@@ -1,4 +1,4 @@
-name: transfer
+name: {YOUR_ENV_NAME}
 channels:
   - conda-forge
   - defaults
@@ -173,4 +173,4 @@ dependencies:
       - urllib3==2.0.7
       - wcwidth==0.2.9
       - widgetsnbextension==4.0.9
-prefix: /home/s1/chaieunlee/anaconda/envs/transfer
+prefix: {PREFIX_OF_YOUR_DIRECTORY}

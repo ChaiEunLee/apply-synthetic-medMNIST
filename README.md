@@ -5,7 +5,7 @@
 ## Description   
 This project is focused on **'Would using a synthetic data feasible to be used in the medical field?'**.    
 
-AI model of medical field usually require a substantial amount of training data, which is always a challenge. Therefore, recently, there are many cases of creating synthetic data to increase training data. However, the effectiveness of this method is indeed questionable. This project checks its effectiveness of using the synthetic data by results of synthetic image quality and augmented classification. 
+> AI model of medical field usually require a substantial amount of training data, which is always a challenge. Therefore, recently, there are many cases of creating synthetic data to increase training data. However, the effectiveness of this method is indeed questionable. This project checks its effectiveness of using the synthetic data by results of synthetic image quality and synthetic augmented classification. 
 
 ### - Task
 Image Classification of Pneumonia.   
@@ -14,8 +14,8 @@ Framework : 1) Base 2) Synthetic base 3) Synthetic augmentation 4) Synthetic fin
 Pre-trained by: 1) Backbone, 2) ImageNet, 3) chestMNIST
 
 ### - Dataset
-* Synthetic Dataset : [synthetic-covid-cxr-dataset](https://github.com/hasibzunair/synthetic-covid-cxr-dataset/releases/tag/v0.1)
 * Real World Dataset : PneumoniaMNIST([MedMNIST Official](https://github.com/MedMNIST/MedMNIST))     
+* Synthetic Dataset : [synthetic-covid-cxr-dataset](https://github.com/hasibzunair/synthetic-covid-cxr-dataset/releases/tag/v0.1)
 * Pre-trained Dataset : ImageNet / ChestMNIST([MedMNIST Official](https://github.com/MedMNIST/MedMNIST))     
 
 ### - Process and Stacks
@@ -176,7 +176,8 @@ FILL HERE
 * synthetic-covid-cxr-dataset, GitHub - hasibzunair/synthetic-covid-cxr-dataset : Synthetic COVID-19 Chest X-ray Dataset for Computer-Aided Diagnosis, GitHub. [https://github.com/hasibzunair/synthetic-covid-cxr-dataset/releases/tag/v0.1](https://github.com/hasibzunair/synthetic-covid-cxr-dataset/releases/tag/v0.1)   
 * [deit-tiny-pathch16-224 hugging face official](https://huggingface.co/facebook/deit-tiny-patch16-224)
 * ResNet - 1) [Backbone](https://github.com/MedMNIST/experiments/blob/main/MedMNIST2D/models.py), 2)[ImageNet](https://github.com/MedMNIST/experiments/blob/main/MedMNIST2D/models.py), 3) [ChestMNIST](https://zenodo.org/records/7782114) 
-* DeiT -  1) [Backbone](https://github.com/facebookresearch/deit/blob/main/models.py), 2) [ImageNet](https://github.com/facebookresearch/deit/blob/main/models.py)
+* DeiT -  1) [Backbone](https://github.com/facebookresearch/deit/blob/main/models.py), 2) [ImageNet](https://github.com/facebookresearch/deit/blob/main/models.py)   
+
 ## Language
 <p>
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white">

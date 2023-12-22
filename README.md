@@ -141,7 +141,11 @@ with zipfile.ZipFile(f"{PATH}/synthetic_shared.zip", 'r') as zip_ref:
 ```
 
 ## Run File
-**1) Resnet50**
+**1) Resnet50**     
+```
+FILL HERE
+```
+
 **2) DeiT**
   - Change current directory before running Deit.
   ```

@@ -1,22 +1,22 @@
-# Applicability of synthetic data in medical field
+# Applicability of synthetic data in the medical field
 >2023-2 데이터사이언스 특강 (전이학습 기반의 딥러닝)   
 >[Sehyun Park](https://github.com/sehyunpark99), [Chaieun Lee](https://github.com/ChaiEunLee), Jungguk Kim, [Hyunbin Jin](https://github.com/hyunbinui)
 
 ## Description   
-This project is focused on **'Would using a synthetic data feasible to be used in the medical field?'**.    
+This project is focused on **' Would using synthetic data be feasible to be used in the medical field?'**.    
 
-> AI model of medical field usually require a substantial amount of training data, which is always a challenge. Therefore, recently, there are many cases of creating synthetic data to increase training data. However, the effectiveness of this method is indeed questionable. This project checks its effectiveness of using the synthetic data by results of synthetic image quality and synthetic augmented classification. 
+> AI models in the medical field usually require substantial training data, which is always a challenge. Therefore, recently, there have been many cases of creating synthetic data to increase training data. However, the effectiveness of this method is indeed questionable. This project checks the effectiveness of using the synthetic data by results of synthetic image quality and synthetic augmented classification. 
 
 ### - Task
 Image Classification of Pneumonia.   
-> Models : 1) Resnet50 , 2) [DeiT-tiny](https://huggingface.co/facebook/deit-tiny-patch16-224)   
-Framework : 1) Base 2) Synthetic base 3) Synthetic augmentation 4) Synthetic fine-tuning    
+> Models: 1) Resnet50 , 2) [DeiT-tiny](https://huggingface.co/facebook/deit-tiny-patch16-224)   
+Framework: 1) Base 2) Synthetic base 3) Synthetic augmentation 4) Synthetic fine-tuning    
 Pre-trained by: 1) Backbone, 2) ImageNet, 3) chestMNIST
 
 ### - Dataset
-* Real World Dataset : PneumoniaMNIST([MedMNIST Official](https://github.com/MedMNIST/MedMNIST))     
-* Synthetic Dataset : [synthetic-covid-cxr-dataset](https://github.com/hasibzunair/synthetic-covid-cxr-dataset/releases/tag/v0.1)
-* Pre-trained Dataset : ImageNet / ChestMNIST([MedMNIST Official](https://github.com/MedMNIST/MedMNIST))     
+* Real World Dataset: PneumoniaMNIST([MedMNIST Official](https://github.com/MedMNIST/MedMNIST))     
+* Synthetic Dataset: [synthetic-covid-cxr-dataset](https://github.com/hasibzunair/synthetic-covid-cxr-dataset/releases/tag/v0.1)
+* Pre-trained Dataset: ImageNet / ChestMNIST([MedMNIST Official](https://github.com/MedMNIST/MedMNIST))     
 
 ### - Process and Stacks
 * GPU: 1 A6000
@@ -95,7 +95,7 @@ ChestMNIST | Base | &nbsp; |  0.80929
 &nbsp; | Synthetic Fine-tuning | &nbsp; | 0.41506
 
 ## Code Structure   
-* ```requirement.yaml``` : To install dependencies
+* ```requirement.yaml``` : To install required packages
 * **/deit**
   * **/experiment_backbone** : Backbone
     * ```Deit_base.py``` : Train and test with real data.   
@@ -103,15 +103,21 @@ ChestMNIST | Base | &nbsp; |  0.80929
     * ```Deit_synthetic_ft.py``` : Trained of real data and fine-tuning with synthetic data.    
     * ```Deit_synthetic.py``` :  Train in synthetic data and test with real data.   
   * **/expeirment_imagenet** : Imagenet pre-trained
-    * *Same with **./experiment_backbone***
+    * *Same as **./experiment_backbone***
   * **/experiment_chest** : ChestMNIST pre-trained
-    * *Same with **./experiment_backbone***
+    * *Same as **./experiment_backbone***
 
   
 * **/resnet**
-```
-FILL HERE
-```
+* **/experiment_backbone** : Codes for experiments on Backbone model
+    * ```ResNet_base.py``` : Train and test with real data.   
+    * ```ResNet_pnue_synthetic_ratio.py``` : Trained from scratch on varying splits of real and synthetic training data.    
+    * ```ResNet_synthetic_ft.py``` : Trained of real data and fine-tuning with synthetic data.    
+    * ```ResNet_synthetic.py``` :  Train in synthetic data and test with real data.   
+  * **/expeirment_imagenet** : Codes for experiments on Imagenet pre-trained model
+    * *Same as **./experiment_backbone***
+  * **/experiment_chest** : Codes for experiments on ChestMNIST pre-trained model
+    * *Same as **./experiment_backbone***
   
 * **/pretrain_chest**
   * ```Deit_chest_pretrain.py``` : Make pre-train model with ChestMNIST to DeiT

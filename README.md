@@ -109,15 +109,11 @@ ChestMNIST | Base | &nbsp; |  0.80929
 
   
 * **/resnet**
-* **/experiment_backbone** : Codes for experiments on Backbone model
-    * ```ResNet_base.py``` : Train and test with real data.   
-    * ```ResNet_pnue_synthetic_ratio.py``` : Trained from scratch on varying splits of real and synthetic training data.    
-    * ```ResNet_synthetic_ft.py``` : Trained of real data and fine-tuning with synthetic data.    
-    * ```ResNet_synthetic.py``` :  Train in synthetic data and test with real data.   
-  * **/expeirment_imagenet** : Codes for experiments on Imagenet pre-trained model
-    * *Same as **./experiment_backbone***
-  * **/experiment_chest** : Codes for experiments on ChestMNIST pre-trained model
-    * *Same as **./experiment_backbone***
+   * ```ResNet_base.py``` : Train and test with real data.   
+   * ```ResNet_pnue_synthetic_ratio.py``` : Trained from scratch on varying splits of real and synthetic training data.    
+   * ```ResNet_synthetic_ft.py``` : Trained of real data and fine-tuning with synthetic data.    
+   * ```ResNet_synthetic.py``` :  Train in synthetic data and test with real data.   
+
   
 * **/pretrain_chest**
   * ```Deit_chest_pretrain.py``` : Make pre-train model with ChestMNIST to DeiT
@@ -147,10 +143,17 @@ with zipfile.ZipFile(f"{PATH}/synthetic_shared.zip", 'r') as zip_ref:
 ```
 
 ## Run File
-**1) Resnet50**     
-```
-FILL HERE
-```
+**1) ResNet50**     
+- Change current directory before running ResNet50.
+  ```
+  cd resnet
+  ```
+  - Select ```{file_name}``` written above and run.
+    - Backbone, ImageNet pre-trained, chestMNIST pre-trained
+    ```
+    python ${PATH}/deit/{file_name}.py
+    ```
+
 
 **2) DeiT**
   - Change current directory before running Deit.
